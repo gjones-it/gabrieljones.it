@@ -2,31 +2,4 @@
 layout: default
 ---
 
-<div class="container-main">
-  <!-- Sidebar -->
-  <div class="sidebar-flat">
-    <h3>{{ page.sidebar_title | default: "Indice dei servizi" }}</h3>
-
-    <nav class="navbar navbar-expand-md p-0">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-laterale">
-        Menu di navigazione
-      </button>
-
-      <div id="menu-laterale" class="collapse navbar-collapse p-0">
-        <ul>
-          {% for link in page.sidebar_links %}
-            <li>
-              <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Contenuto -->
-  <main class="content">
-    <h2>{{ page.title }}</h2>
-    {{ content }}
-  </main>
-</div>
+<div class="row justify-content-center"> <div class="col-lg-10"> <!-- Breadcrumb --> <nav aria-label="breadcrumb" class="mb-4"> <ol class="breadcrumb"> <li class="breadcrumb-item"><a href="/">Home</a></li> <li class="breadcrumb-item"><a href="/archivio/">Archivio</a></li> <li class="breadcrumb-item active" aria-current="page"> {{ page.title }} </li> </ol> </nav> <!-- Header articolo --> <header class="mb-5"> {% if page.category %} <span class="badge bg-primary mb-3"> {{ page.category }} </span> {% endif %} <h1 class="display-5 fw-bold mb-3"> {{ page.title }} </h1> {% if page.subtitle %} <p class="lead text-muted"> {{ page.subtitle }} </p> {% endif %} <div class="d-flex flex-wrap gap-3 text-muted small border-top border-bottom py-3"> {% if page.author %} <div> 👤 <strong>{{ page.author }}</strong> </div> {% endif %} {% if page.date %} <div> 📅 {{ page.date | date: "%d/%m/%Y" }} </div> {% endif %} {% if page.location %} <div> 📍 {{ page.location }} </div> {% endif %} {% if page.reading_time %} <div> ⏱️ {{ page.reading_time }} </div> {% endif %} </div> </header> <!-- Immagine in evidenza --> {% if page.image %} <div class="mb-5"> <img src="{{ page.image }}" class="img-fluid rounded shadow-sm w-100" alt="{{ page.title }}"> </div> {% endif %} <!-- Corpo --> <article class="content-body"> {{ content }} </article> <!-- Informazioni finali --> <div class="card mt-5 border-0 shadow-sm"> <div class="card-body"> <h5>Informazioni</h5> <p class="mb-2"> Documento pubblicato da <strong>{{ page.author | default: "Gabriel Jones" }}</strong>. </p> <p class="mb-0 text-muted"> Ultimo aggiornamento: {{ page.date | date: "%d/%m/%Y" }} </p> </div> </div> <!-- Navigazione --> <div class="d-flex justify-content-between mt-5"> {% if page.previous.url %} <a href="{{ page.previous.url }}" class="btn btn-outline-primary"> ← Articolo precedente </a> {% endif %} {% if page.next.url %} <a href="{{ page.next.url }}" class="btn btn-outline-primary ms-auto"> Articolo successivo → </a> {% endif %} </div> </div> </div>
