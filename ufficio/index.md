@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: rmic/page
 title: "📢 Nuovo lancio: Ufficio di Gabriel Jones"
 description: "Nuovo portale unico, unico per tutto"
 category: Comunicazioni
 date: 2026-05-03
-permalink: /comunicazioni/istituzione-nuovo-ufficio-digitale-gabriel-jones/
+permalink: /rmic/istituzione-nuovo-ufficio-digitale-gabriel-jones/
 
 tags:
   - ufficiogabrieljones
@@ -29,8 +29,8 @@ e altri servizi in continua evoluzione
 
 L’idea è quella di creare un punto centrale semplice da usare, dove consultare contenuti, materiali e risorse in modo ordinato e immediato.
 
-🔗 Puoi accedere qui: https://ufficio.gabrieljones.it/
+🔗 Puoi accedere qui: https://18f.it/
 
 Per contatti e informazioni:
 📞 0434/733808
-✉️ info@18f.it
+✉️ rmic@18f.it
