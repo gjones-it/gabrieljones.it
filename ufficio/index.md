@@ -1,5 +1,5 @@
 ---
-layout: Default
+layout: base
 title: "📢 Nuovo lancio: Ufficio di Gabriel Jones"
 description: "Nuovo portale unico, unico per tutto"
 category: About Me
