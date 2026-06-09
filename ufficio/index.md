@@ -2,7 +2,7 @@
 layout: page
 title: "📢 Nuovo lancio: Ufficio di Gabriel Jones"
 description: "Nuovo portale unico, unico per tutto"
-category: About Me
+category: Comunicazioni
 date: 2026-05-03
 permalink: /comunicazioni/istituzione-nuovo-ufficio-digitale-gabriel-jones/
 
